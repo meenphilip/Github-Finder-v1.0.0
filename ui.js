@@ -40,8 +40,21 @@ class UI {
     this.profile.innerHTML = "";
   }
 
+  // Clear Alert
+  clearAlert() {
+    const currentAlert = document.querySelector(".alert");
+
+    if (currentAlert) {
+      currentAlert.remove();
+    }
+  }
+
   //Show Alert Message
   showAlert(message, className) {
+    // Clear any remaining Alert
+    this.clearAlert();
+
+    // creat div
     const div = document.createElement("div");
     div.className = className;
 
