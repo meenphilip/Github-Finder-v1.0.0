@@ -39,4 +39,22 @@ class UI {
   clearProfile() {
     this.profile.innerHTML = "";
   }
+
+  //Show Alert Message
+  showAlert(message, className) {
+    const div = document.createElement("div");
+    div.className = className;
+
+    // Add text
+    div.appendChild(document.createTextNode(message));
+
+    // Get & append to parent
+    const container = document.querySelector(".searchContainer");
+
+    // Get search box
+    const search = document.querySelector(".search");
+
+    // Insert an Alert
+    container.insertBefore(div, search);
+  }
 }
