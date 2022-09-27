@@ -18,6 +18,7 @@ searchUser.addEventListener("keyup", (e) => {
       .then((user) => {
         if (user.profile.message === "Not Found") {
           // show alert user not found
+          ui.showAlert("User not found", "alert alert-danger");
         } else {
           // show user profile
           ui.showProfile(user.profile);
